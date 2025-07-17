@@ -345,13 +345,6 @@ jobs:
           path: test-results/
 ```
 
-## 📊 Performance Metrics
-
-- **Average Test Execution Time**: ~2-3 seconds per test
-- **Test Coverage**: 95%+ code coverage
-- **Parallel Execution**: Supports Jest's parallel test execution
-- **Memory Usage**: Optimized for CI/CD environments
-
 ## 📚 Resources
 
 - [Jest Documentation](https://jestjs.io/docs/getting-started)
@@ -365,18 +358,6 @@ This project is licensed under the ISC License - see the LICENSE file for detail
 
 ## 👥 Team
 
-- **Author**: [Your Name]
-- **Email**: [your.email@example.com]
-- **GitHub**: [your-github-username]
-
-## 🙏 Acknowledgments
-
-- Thanks to the open-source community for the amazing tools
-- Special thanks to contributors and testers
-- Inspired by modern API testing practices
-
----
-
-**Happy Testing! 🚀**
-
-For questions or support, please open an issue in the repository or contact the development team.
+- **Author**: [Dhrumil Soni]
+- **Email**: [dksoni0812@gmail.com]
+- **GitHub**: [dhrumil-soni-th]
