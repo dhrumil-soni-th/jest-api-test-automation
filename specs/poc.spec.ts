@@ -81,7 +81,7 @@ describe("POC Tests", () => {
 
   describe("DELETE Request", () => {
     // Note: DELETE is used to remove an existing resource
-    it.only("DELETE /posts/{id}", async () => {
+    it("DELETE /posts/{id}", async () => {
       const response = await request.delete("/posts/1");
       console.log(response.body);
       expect(response.statusCode).toBe(200);
