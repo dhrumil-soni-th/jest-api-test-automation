@@ -5,7 +5,6 @@ describe("POC Tests", () => {
   describe("GET Requests", () => {
     it("GET /posts", async () => {
       const response = await request.get("/posts");
-      // console.log(response);
       expect(response.statusCode).toBe(200);
       expect(response.body[0].id).toBe(1);
       expect(response.body[0].userId).toBe(1);
@@ -19,7 +18,6 @@ describe("POC Tests", () => {
       const response = await request
         .get("/comments")
         .query({ postId: 1, limit: 10 });
-      console.log(response);
       expect(response.body[0].postId).toBe(1);
       expect(response.statusCode).toBe(200);
     });
@@ -33,7 +31,6 @@ describe("POC Tests", () => {
         userId: 1,
       };
       const response = await request.post("/posts").send(data);
-      console.log(response.body);
       expect(response.statusCode).toBe(201);
       expect(response.body.title).toBe(data.title);
     });
@@ -50,10 +47,8 @@ describe("POC Tests", () => {
       };
       const getResponse = await request.get("/posts/1");
       const beforeTitle = getResponse.body.title;
-      console.log(beforeTitle);
 
       const response = await request.put("/posts/1").send(data);
-      console.log(response.body);
       expect(response.statusCode).toBe(200);
       expect(response.body.title).not.toBe(beforeTitle);
       expect(response.body.title).toBe(data.title);
@@ -69,10 +64,8 @@ describe("POC Tests", () => {
       };
       const getResponse = await request.get("/posts/1");
       const beforeTitle = getResponse.body.title;
-      console.log(beforeTitle);
 
       const response = await request.patch("/posts/1").send(data);
-      console.log(response.body);
       expect(response.statusCode).toBe(200);
       expect(response.body.title).not.toBe(beforeTitle);
       expect(response.body.title).toBe(data.title);
@@ -83,7 +76,6 @@ describe("POC Tests", () => {
     // Note: DELETE is used to remove an existing resource
     it("DELETE /posts/{id}", async () => {
       const response = await request.delete("/posts/1");
-      console.log(response.body);
       expect(response.statusCode).toBe(200);
       expect(response.body).toEqual({});
     });
